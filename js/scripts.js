@@ -1,6 +1,12 @@
-var myHistory =
-  'My name is Crystal, I want to master ES6, RESTful APIs, and CRUD operations.  Ive had to quickly learn React and Aurelia, and I realized I need to better understand ES6.';
+var myFaveHobby =
+  'My name is Crystal, and I collect vinyl records as a hobby.  My love for music is far and vast, ranging from disco and funk, to synth punk (or whatever the kids are calling it these days).';
 
-var userAnswer = confirm(myHistory);
+var tmi = alert(myFaveHobby);
 
+var popQuiz =
+  'Back to the Future is the best time traveling movie of all time.';
+
+var userAnswer = confirm(popQuiz);
+
+console.log(tmi);
 console.log(userAnswer);
