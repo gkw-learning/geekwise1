@@ -24,3 +24,31 @@ if (yearsOld < 80 && yearsOld > 18) {
 } else {
   alert(`good on you for surving ${yearsOld} years.`);
 }
+/*************************/
+alert('NEW GAME TIME. aka actual take home.');
+
+let userName = prompt(
+  "its time to tell me your fave color, first what's your name?"
+);
+
+let x = prompt(
+  `thanks, ${userName}. So, what's your fave color? Red, Orange, Yellow, Green, Blue, Pink, Purple, Black, White, or Grey`
+);
+
+let y = x.toLowerCase();
+if (
+  y === 'red' ||
+  'orange' ||
+  'yellow' ||
+  'green' ||
+  'blue' ||
+  'pink' ||
+  'purple' ||
+  'black' ||
+  'white' ||
+  'green'
+) {
+  alert(`${y}. nice`);
+} else {
+  alert('cool, i hate colors too.');
+}
