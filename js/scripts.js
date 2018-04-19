@@ -44,3 +44,49 @@ switch(parseInt(numOfProjects)) {
  default:
    alert(’You didn\‘t follow the rules.’);
 }
+
+
+//TERNAREIS
+Condition ? expression 1 : expression 2;
+let yourAge = prompt('how old are you');
+(parseInt(yourAge))>= 18 ? alert('you can buy a lottery ticket') : alert("you cant buy a lottery ticket");
+//arrays
+let cars = ["jeep", "subaru", "honda"];
+console.log(cars[1]); //because subaru is index 1
+console.log(cars.legnth); //3, how many items are in the arrays
+console.log(cars[1].length); //tells length of string in index 1
+cars.push("bmw"); //adds bmw to the end
+console.log(cars); //adds bmw to the end
+
+let removedCar = cars.pop() //pops the last one off
+console.log(cars);
+console.log("i am removedCars " + removedCar); //see no bmw
+
+cars.unshift("chevy");
+console.log("i am unshift " + cars);
+//SPLICE -----------
+//splice can remove an element, or remove and element and replace it with new element, or just add element
+//1, is the index, 0 is the count. as in count
+cars.splice(1, 0, "red", "green"); //so at index 1, we're adding "red", "green", and 0 means how many items to remove
+
+
+//isArray ----------- might use when dealing with data I didnt create
+let arr= ["bo", "chelsea", "quinn"];
+Array.isArray(arr);
+
+
+//shift -------------
+let arr= ["bo", "chelsea", "quinn"];
+arr.shift();
+
+console.log(arr); //removes bo
+
+//slice -----------------
+
+//(beginArg, endArg), beginArg=where we want the copy to start, endArg=the item you want to STOP at, and includes the previous item.
+let arr= ["bo", "chelsea", "quinn"];
+//arguments are optional in slice, but will give you an exact copy of the original array
+let bestEver = arr.slice();
+//must set to new var if using no args. so now arr and bestEver are two dif copies of same array
+//arg3 is what you want to add. if dont want to add anything, put a 0
+console.log(arr);
