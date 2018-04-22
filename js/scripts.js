@@ -118,3 +118,5 @@ alert(titles);
 let bigFaveLittleFave = [];
 bigFaveLittleFave.push(titles.splice(0,1), titles.splice(3,1));
 console.log(bigFaveLittleFave);
+
+alert(faveMovies.length)
