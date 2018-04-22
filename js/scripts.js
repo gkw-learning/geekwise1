@@ -106,6 +106,7 @@ let f5 = [' Edward Scissorhands', ' Edward'];
 
 let faveMovies = [];
 faveMovies.push(f1, f2, f3, f4, f5);
+
 let titles = [];
 titles.push(
   faveMovies[0][0],
@@ -115,8 +116,27 @@ titles.push(
   faveMovies[4][0]
 );
 alert(titles);
+
 let bigFaveLittleFave = [];
 bigFaveLittleFave.push(titles.splice(0,1), titles.splice(3,1));
 console.log(bigFaveLittleFave);
 
 alert(faveMovies.length)
+
+/*  LOOPS */
+// Now, using your faveMovies array:
+// Write a for loop to iterate over the array
+// Find your favorite movie by searching for the title in the loop
+// Once the program finds your favorite movie, have it alert the title and year it was made
+// There is much more you can do with arrays. Read more about array methods here.
+
+
+for (var i = 0; i <= titles.length; i++) {
+  if(bigFaveLittleFave[i] === bigFaveLittleFave[0]) {
+    alert(`found it!, you like + ${bigFaveLittleFave[i]} !`);
+    break;
+  }
+  else {
+    alert(`sorry, couldnt figure out which is your fave.`)
+  }
+}
