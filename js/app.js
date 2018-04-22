@@ -74,15 +74,52 @@ let a3T = a3.length;
 
 console.log(a1T, a2T, a3T);
 
+// while (a1T || a2T || a3T > 0) {
+//   if (a3T > a2T && a1T) {
+//     alert(`${a3} will take the longest. do it first. get it out of the way.`);
+//     break;
+//   } else if (a1T > a2T && a3T) {
+//     alert(`${a1} will take this longest. just get it out of the way.`);
+//     break;
+//   } else if (a2T > a3T && a2T) {
+//     alert(`${a2} will take this longest. but you got this.`);
+//     break;
+//   }
+// }
+
+let time;
 while (a1T || a2T || a3T > 0) {
   if (a3T > a2T && a1T) {
     alert(`${a3} will take the longest. do it first. get it out of the way.`);
+    time = a3;
     break;
   } else if (a1T > a2T && a3T) {
     alert(`${a1} will take this longest. just get it out of the way.`);
+    time = a1;
     break;
   } else if (a2T > a3T && a2T) {
     alert(`${a2} will take this longest. but you got this.`);
+    time = a2;
     break;
   }
 }
+console.log(`c'mon baby ${time}`);
+//do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
+// do {
+//     code block to be executed
+// }
+// while (condition);
+var text = '';
+var i = 0;
+
+do {
+  text += 'Done ' + i;
+  i++;
+} while (i < todo[i].length && todo[i].length < time);
+
+console.log(text);
+// infinite loop!!!!!
+// do {
+//   todo += i + 'done';
+// } while (todo[i] < time);
+// console.log(todo);
