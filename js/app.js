@@ -42,4 +42,4 @@ switch (usersChoice) {
   default:
     alert('your color palette is too sophistcated for me.');
 }
-alert('take home 4');
+alert('day 4 take home');
