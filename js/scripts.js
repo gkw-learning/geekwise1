@@ -14,7 +14,7 @@ while (true) {
   }
 }
 
-//Switch Statement compared to an if Statement
+//SWITCH compared to an if Statement
 
 //Some Sudo Code
 switch(NumOfProjects) {
@@ -28,21 +28,21 @@ switch(NumOfProjects) {
     //This comes last and usually exits the switch because there
     //was an error.
 }
-//Switch Statement from Christa
-var numOfProjects = prompt(“How many projects do you have? You can choose a number 0-2.“);
+//SWITCH Statement from Christa
+var numOfProjects = prompt('How many projects do you have? You can choose a number 0-2.');
 
 switch(parseInt(numOfProjects)) {
  case 0:
-     alert(“You won’t have a projects section on your page”);
+     alert('You won’t have a projects section on your page');
      break;
     case 1:
-     alert(“You’ll only have one showing”);
+     alert('You’ll only have one showing');
      break;
     case 2:
-   alert(“You’ll only have one showing”);
+   alert('You’ll only have one showing');
         break;
  default:
-   alert(’You didn\‘t follow the rules.’);
+   alert(`You didn\‘t follow the rules.`);
 }
 
 
@@ -50,7 +50,8 @@ switch(parseInt(numOfProjects)) {
 Condition ? expression 1 : expression 2;
 let yourAge = prompt('how old are you');
 (parseInt(yourAge))>= 18 ? alert('you can buy a lottery ticket') : alert("you cant buy a lottery ticket");
-//arrays
+
+//ARRAYS
 let cars = ["jeep", "subaru", "honda"];
 console.log(cars[1]); //because subaru is index 1
 console.log(cars.legnth); //3, how many items are in the arrays
@@ -74,19 +75,68 @@ cars.splice(1, 0, "red", "green"); //so at index 1, we're adding "red", "green",
 let arr= ["bo", "chelsea", "quinn"];
 Array.isArray(arr);
 
+//***************************************************************************************//
+//                                In Class Try Outs                                      //
+//***************************************************************************************//
+// Your favorite movie of 2017
+// Your lucky number
+// Whether or not you are a Star Wars fan (using a Boolean)
+// The year you graduated high school
+// console.log the var and the length of the array.
 
-//shift -------------
-let arr= ["bo", "chelsea", "quinn"];
-arr.shift();
+let tmi = ['wonder woman', 33, true, 2001];
+console.log(tmi);
+console.log(tmi.length); //4
 
-console.log(arr); //removes bo
+alert(`day 4 'try it out 2'`);
 
-//slice -----------------
+// In your scripts.js file, create 5 arrays, each with one of your
+//top 5 movies' title and the main character's name
+//
+// Add all of these arrays to a final array named favoriteMovies
+// Create an array with just the titles of your favorite movies and alert it
+// Create another array with your favorite and least favorite of the top 5 and console.log it.
+// Check the length of your favoriteMovies array by alerting it.
 
-//(beginArg, endArg), beginArg=where we want the copy to start, endArg=the item you want to STOP at, and includes the previous item.
-let arr= ["bo", "chelsea", "quinn"];
-//arguments are optional in slice, but will give you an exact copy of the original array
-let bestEver = arr.slice();
-//must set to new var if using no args. so now arr and bestEver are two dif copies of same array
-//arg3 is what you want to add. if dont want to add anything, put a 0
-console.log(arr);
+let f1 = [' Back to the Future', ' Marty McFly'];
+let f2 = [' Shaun of the Dead', ' Shaun'];
+let f3 = [' Napolean Dynamite', ' Napolean'];
+let f4 = [' Matrix', ' Neo'];
+let f5 = [' Edward Scissorhands', ' Edward'];
+
+let faveMovies = [];
+faveMovies.push(f1, f2, f3, f4, f5);
+
+let titles = [];
+titles.push(
+  faveMovies[0][0],
+  faveMovies[1][0],
+  faveMovies[2][0],
+  faveMovies[3][0],
+  faveMovies[4][0]
+);
+alert(titles);
+
+let bigFaveLittleFave = [];
+bigFaveLittleFave.push(titles.splice(0,1), titles.splice(3,1));
+console.log(bigFaveLittleFave);
+
+alert(faveMovies.length)
+
+/*  LOOPS */
+// Now, using your faveMovies array:
+// Write a for loop to iterate over the array
+// Find your favorite movie by searching for the title in the loop
+// Once the program finds your favorite movie, have it alert the title and year it was made
+// There is much more you can do with arrays. Read more about array methods here.
+
+
+for (var i = 0; i <= titles.length; i++) {
+  if(bigFaveLittleFave[i] === bigFaveLittleFave[0]) {
+    alert(`found it!, you like + ${bigFaveLittleFave[i]} !`);
+    break;
+  }
+  else {
+    alert(`sorry, couldnt figure out which is your fave.`)
+  }
+}
