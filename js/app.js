@@ -43,3 +43,26 @@ switch (usersChoice) {
     alert('your color palette is too sophistcated for me.');
 }
 alert('day 4 take home');
+//On the day4 branch of your take-home repository, write a program that:
+//
+// Creates an array of things you need or want to do this weekend by collecting three todos from the user.
+// Using a for loop, change the items in the array by adding days they should be completed to each index.
+// Using a while loop, find the task that will take the longest and log it to the console.
+// Using a do while loop, add the string 'done' to all the tasks other than the one that will take the longest
+// Finally, alert all the tasks that are marked done in the todo array.
+let a1 = prompt('what do you want to do this weekend?');
+let a2 = prompt('what else?');
+let a3 = prompt('and one more thing to do?');
+
+let todo = [];
+todo.push(a1, a2, a3);
+console.log(todo);
+
+let days = [' friday', ' saturday', ' sunday'];
+
+for (var i = 0; i < todo.length; i++) {
+  for (var i = 0; i < days.length; i++) {
+    let when = todo[i] + days[i];
+    console.log(when);
+  }
+}
