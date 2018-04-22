@@ -109,15 +109,33 @@ console.log(`c'mon baby ${time}`);
 //     code block to be executed
 // }
 // while (condition);
-var text = '';
-var i = 0;
 
+//do {
+//  add done to items in todo array
+//}
+//while {
+//  while item < time
+//}
+var i = 0;
+var text = '';
+var length = time.length;
+console.log(length);
 do {
-  text += 'Done ' + i;
+  text += 'done.' + todo[i];
   i++;
-} while (i < todo[i].length && todo[i].length < time);
+} while (i < length);
 
 console.log(text);
+
+// var text = '';
+// var i = 0;
+//
+// do {
+//   text += 'Done ' + todo[i];
+//   i++;
+// } while (i < todo[i].length < time);
+//
+// console.log(text);
 // infinite loop!!!!!
 // do {
 //   todo += i + 'done';
