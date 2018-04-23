@@ -68,76 +68,48 @@ for (var i = 0; i < todo.length; i++) {
 }
 
 //length of answer will make believe how long the task will take.
+// let a1T = a1.length;
+// let a2T = a2.length;
+// let a3T = a3.length;
 let a1T = a1.length;
 let a2T = a2.length;
 let a3T = a3.length;
 
 console.log(a1T, a2T, a3T);
 
-// while (a1T || a2T || a3T > 0) {
-//   if (a3T > a2T && a1T) {
-//     alert(`${a3} will take the longest. do it first. get it out of the way.`);
-//     break;
-//   } else if (a1T > a2T && a3T) {
-//     alert(`${a1} will take this longest. just get it out of the way.`);
-//     break;
-//   } else if (a2T > a3T && a2T) {
-//     alert(`${a2} will take this longest. but you got this.`);
-//     break;
-//   }
-// }
-
-let time;
+var mostTime;
+console.log(typeof mostTime);
 while (a1T || a2T || a3T > 0) {
   if (a3T > a2T && a1T) {
     alert(`${a3} will take the longest. do it first. get it out of the way.`);
-    time = a3;
+    mostTime = a3;
     break;
   } else if (a1T > a2T && a3T) {
     alert(`${a1} will take this longest. just get it out of the way.`);
-    time = a1;
+    mostTime = a1;
     break;
   } else if (a2T > a3T && a2T) {
     alert(`${a2} will take this longest. but you got this.`);
-    time = a2;
+    mostTime = a2;
     break;
   }
 }
-console.log(`c'mon baby ${time}`);
-//do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
-// do {
-//     code block to be executed
-// }
-// while (condition);
-
-//do {
-//  add done to items in todo array
-//}
-//while {
-//  while item < time
-//}
-var i = 0;
-var text = '';
-var length = time.length;
-console.log(length);
+// //do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
+// // do {
+// //     code block to be executed
+// // }
+// // while (condition);
+//
+// //do {
+// //  add done to items in todo array
+// //}
+// //while {
+// //  while item < mostTime
+// //}
+let text = '';
+let z = 0;
 do {
-  text += 'done.' + todo[i];
-  i++;
-} while (i < length);
-
+  text += 'done ' + todo[z];
+  z++;
+} while (todo[z].length < mostTime.length);
 console.log(text);
-
-// var text = '';
-// var i = 0;
-//
-// do {
-//   text += 'Done ' + todo[i];
-//   i++;
-// } while (i < todo[i].length < time);
-//
-// console.log(text);
-// infinite loop!!!!!
-// do {
-//   todo += i + 'done';
-// } while (todo[i] < time);
-// console.log(todo);
