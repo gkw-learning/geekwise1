@@ -67,10 +67,6 @@ for (var i = 0; i < todo.length; i++) {
   }
 }
 
-//length of answer will make believe how long the task will take.
-// let a1T = a1.length;
-// let a2T = a2.length;
-// let a3T = a3.length;
 let a1T = a1.length;
 let a2T = a2.length;
 let a3T = a3.length;
@@ -94,3 +90,22 @@ while (a1T || a2T || a3T > 0) {
     break;
   }
 }
+// //do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
+// // do {
+// //     code block to be executed
+// // }
+// // while (condition);
+//
+// //do {
+// //  add done to items in todo array
+// //}
+// //while {
+// //  while item < mostTime
+// //}
+let text = '';
+let z = 0;
+do {
+  text += 'done ' + todo[z];
+  z++;
+} while (todo[z].length < mostTime.length);
+console.log(text);
