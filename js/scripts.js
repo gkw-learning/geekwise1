@@ -119,9 +119,10 @@ alert(titles);
 
 let bigFaveLittleFave = [];
 bigFaveLittleFave.push(titles.splice(0,1), titles.splice(3,1));
-console.log(bigFaveLittleFave);
 
-alert(faveMovies.length)
+console.log(bigFaveLittleFave, 'big fave lil after push and splice');
+
+// alert(faveMovies.length)
 
 /*  LOOPS */
 // Now, using your faveMovies array:
@@ -130,13 +131,26 @@ alert(faveMovies.length)
 // Once the program finds your favorite movie, have it alert the title and year it was made
 // There is much more you can do with arrays. Read more about array methods here.
 
-
-for (var i = 0; i <= titles.length; i++) {
-  if(bigFaveLittleFave[i] === bigFaveLittleFave[0]) {
-    alert(`found it!, you like + ${bigFaveLittleFave[i]} !`);
-    break;
+let foundValue = null;
+for (var i = 0; i <= bigFaveLittleFave.length && foundValue !== null ; i++) {
+  //can't do strict comparions to an entire array
+  console.log(bigFaveLittleFave[i][0][0], bigFaveLittleFave[0][0][0], 'individual biglittle[0][0]');
+  if(bigFaveLittleFave[i][0][0] === bigFaveLittleFave[0][0][0]) {
+    alert(`found it!, you like ${bigFaveLittleFave[i]} !`);
+    foundValue = null;
+    // break;
   }
   else {
     alert(`sorry, couldnt figure out which is your fave.`)
   }
 }
+
+//***************************************************************************************//
+//                                   Notes on Loops                                      //
+//***************************************************************************************//
+/*
+for of loop and fo in loop is better for objects
+for of loop, you need to know what you're looking for and an object.
+in other words, the thing you're looking for must be an array or object
+for in loop is only for objects.
+use 'break;' only in
