@@ -36,3 +36,4 @@ function maths(argTemp, argScale) {
   }
 }
 maths(numifyTemp, scale);
+
