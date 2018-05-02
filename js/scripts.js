@@ -13,7 +13,7 @@ function maths(argTemp, argScale) {
     argScale === 'fahrenheit' ||
     argScale === 'Fahrenheit'
   ) {
-    fToC = numifyTemp * 9 / 5 + 32; //converting from f to c
+    fToC = (numifyTemp - 32) * 5 / 9; //converting from f to c
     theH3.textContent = `your temp in fahrenheit converts to ${fToC} celcius.`;
     theH3.addEventListener('mouseover', e => {
       theH3.textContent = `in case you forgot, we're converting from ${numifyTemp} ${scale}`; //add some text content
@@ -24,7 +24,7 @@ function maths(argTemp, argScale) {
     argScale === 'celcius' ||
     argScale === 'Celcius'
   ) {
-    cToF = (numifyTemp - 32) * 5 / 9; //converting from c to f
+    cToF = numifyTemp * 9 / 5 + 32; //converting from c to f
     theH3.textContent = `your temp in celcius converts to ${cToF} fahrenheit.`;
     theH3.addEventListener('mouseover', e => {
       theH3.textContent = `in case you forgot, we're converting from ${numifyTemp} ${scale}`; //add some text content
