@@ -39,7 +39,7 @@ console.log(typeof numifyTemp);
 //so split answer using ' ', and should split what they give me by words
 
 let cToF;
-let theH3 = theH3.getElementsByTagName('h3');
+const h3 = document.querySelector('h3');
 
 function maths(argTemp, argScale) {
   if (
@@ -50,7 +50,7 @@ function maths(argTemp, argScale) {
   ) {
     fToC = numifyTemp * 9 / 5 + 32; //converting from f to c
     console.log(`this should give back a conversion ${fToC}`);
-    theH3.addEventListener('click', function(e) {});
+    h3.textContent = `your temp in fahrenheit converts to ${fToC} celcius.`;
   } else if (
     argScale === 'c' ||
     argScale === 'C' ||
@@ -59,6 +59,7 @@ function maths(argTemp, argScale) {
   ) {
     cToF = (numifyTemp - 32) * 5 / 9; //converting from c to f
     console.log(`this should convert to f ${cToF}`);
+    h3.textContent = `your temp in celcius converts to ${cToF} fahrenheit.`;
   } else {
     alert(
       'what planet is that temperature on?  I only understand Fahrenheit or Celcius.'
@@ -67,6 +68,26 @@ function maths(argTemp, argScale) {
 }
 console.log(typeof cToF);
 maths(numifyTemp, scale);
+// div.addEventListener('mouseover', (e) => {
+//   let newPTag = document.createElement('p'); //Create a new element
+//   newPTag.textContent = "Hey there, guy/gal/friend/frienemy!!!"; //add some text content to that element
+//   div.appendChild(newPTag); //add that element to another parent element
+// });
+// const button = document.querySelector('button');
+// const container = document.querySelector('.container');
+// const h1 = document.querySelctor('h1');
+//
+// button.addEventListener('click', e => {
+//   alert('thanks for the click');
+// });
+//
+// container.addEventListener('mouseenter', e => {
+//   div.className = 'rebeccapurple';
+// });
+//
+// h1.addEventListener('mouseup', e => {
+//   h1.style.color = 'yellow'; //same thing as div.className, but this is better
+// });
 //loop through answer find F or C, and give to var a
 //loop through answer and find number and give to var b
 //then give those vars as parametersfunction (Num, Scale)
