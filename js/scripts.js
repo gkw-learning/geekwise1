@@ -1,7 +1,7 @@
 let cToF;
 const theH3 = document.querySelector('h3');
 let gimmeTemp = prompt(
-  'give me a temperature to convert for you in either Fahrenheit or Celcius. the format can be 30 f, or 10 c, or 20 Celcius, etc.'
+  'give me a temperature to convert for you in either Fahrenheit or Celcius. the format can be 30 F, or 10 c, or 20 Celcius, etc.'
 ).split(' ');
 let scale = gimmeTemp.splice(1, 1).toString(); //array, to string?
 let numifyTemp = parseInt(gimmeTemp); //number
