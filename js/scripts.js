@@ -64,21 +64,21 @@ For the h1, change the color of the text the user releases their mouse.
 Not Tough Enough? Try redirecting the user's browser to facebook when the click anywhere on the page.
 */
 
-const button = document.querySelector('button');
-const container = document.querySelector('.container');
-const h1 = document.querySelctor('h1');
-
-button.addEventListener('click', e => {
-  alert('thanks for the click');
-});
-
-container.addEventListener('mouseenter', e => {
-  div.className = 'rebeccapurple';
-});
-
-h1.addEventListener('mouseup', e => {
-  h1.style.color = 'yellow'; //same thing as div.className, but this is better
-});
+// const button = document.querySelector('button');
+// const container = document.querySelector('.container');
+// const h1 = document.querySelctor('h1');
+//
+// button.addEventListener('click', e => {
+//   alert('thanks for the click');
+// });
+//
+// container.addEventListener('mouseenter', e => {
+//   div.className = 'rebeccapurple';
+// });
+//
+// h1.addEventListener('mouseup', e => {
+//   h1.style.color = 'yellow'; //same thing as div.className, but this is better
+// });
 
 //RYEKER'S NOTES FROM DAY 7
 // const div = document.querySelector('div');
@@ -96,3 +96,4 @@ h1.addEventListener('mouseup', e => {
 //   newDiv.innerHTML = '<h3 class="text-center">Whoa! You clicked the thing!</h3><p>Some other things you might be interested in....</p>'; //Add some HTML content to the DIV you made
 //   div.insertBefore(newDiv, p); //Add you new DIV to a parent (const div), BEFORE a sibling node (const p).
 // });
+////////////////////////////DAY 8 continuation of Day 7
